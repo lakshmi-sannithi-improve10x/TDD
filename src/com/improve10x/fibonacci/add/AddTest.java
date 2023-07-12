@@ -1,4 +1,4 @@
-package com.improve10x.fibonacci.remainder;
+package com.improve10x.fibonacci.add;
 
 import org.junit.jupiter.api.Test;
 

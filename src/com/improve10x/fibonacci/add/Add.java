@@ -1,4 +1,4 @@
-package com.improve10x.fibonacci.remainder;
+package com.improve10x.fibonacci.add;
 
 public class Add {
     public static void main(String[] args) {
