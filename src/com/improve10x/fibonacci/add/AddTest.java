@@ -12,9 +12,23 @@ public class AddTest {
     }
 
     @Test
-    public void givenOneAndThree_returnRemainderOne(){
+    public void givenTwentyTwoAndFifteen_returnTrue(){
         Add add = new Add();
-        boolean twoAndThree = add.sumIsLessThan100(2,3);
-        assertEquals(true,twoAndThree);
+        boolean twentyTwoAndFifteen = add.sumIsLessThan100(22,15);
+        assertEquals(true,twentyTwoAndFifteen);
+    }
+
+    @Test
+    public void givenEightyThreeAndThirtyFour_returnFalse(){
+        Add add = new Add();
+        boolean eightyThreeAndThirtyFour = add.sumIsLessThan100(83,34);
+        assertEquals(false,eightyThreeAndThirtyFour);
+    }
+
+    @Test
+    public void givenThreeAndSeventySeven_returnF(){
+        Add add = new Add();
+        boolean threeAndSeventySeven = add.sumIsLessThan100(3,77);
+        assertEquals(true,threeAndSeventySeven);
     }
 }
