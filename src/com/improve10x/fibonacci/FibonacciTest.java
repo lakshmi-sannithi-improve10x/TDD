@@ -11,10 +11,10 @@ public class FibonacciTest {
 
     }
     /* fibonacci series-0,1,1,2,3,5---
-    input n= -10 ,n = -1
-    input n= 0, n= 0
-    input n= 1, n= 0
-    input n= 2,n= 2
+    input n=-10,output = -1
+    input n= 0, output= 0
+    input n= 1, output= 0
+    input n= 2, output= 1
      */
     @Test
     public  void giveAnyNegativeNumber_returnNegativeOne(){
