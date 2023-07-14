@@ -3,6 +3,9 @@ package com.improve10x.fibonacci.nameinverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NameInverterTest {
@@ -52,5 +55,23 @@ public class NameInverterTest {
     public void givenHonorifics_returnIgnoreHonorifics(){
         String singleWordWithSpace = nameInverter.invertName("Mrs. first last");
         assertEquals("last, first",singleWordWithSpace);
+    }
+
+    @Test
+    public void givenMrHonorifics_returnIgnoreHonorifics(){
+        String singleWordWithSpace = nameInverter.invertName("Mr. first last");
+        assertEquals("last, first",singleWordWithSpace);
+    }
+
+    @Test
+    public void givenLastMscHonorifics_returnIgnoreHonorifics(){
+        String singleWordWithSpace = nameInverter.invertName("first last Msc.");
+        assertEquals("last, first Msc.",singleWordWithSpace);
+    }
+
+    @Test
+    public void givenLastMscPhdHonorifics_returnIgnoreHonorifics(){
+        String singleWordWithSpace = nameInverter.invertName("first last Msc. Phd.");
+        assertEquals("last, first Msc.",singleWordWithSpace);
     }
 }
