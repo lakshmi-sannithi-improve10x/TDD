@@ -74,4 +74,10 @@ public class NameInverterTest {
         String singleWordWithSpace = nameInverter.invertName("first last Msc. Phd.");
         assertEquals("last, first Msc.",singleWordWithSpace);
     }
+
+    @Test
+    public void integrationTest(){
+        String invertedName = nameInverter.invertName("Mr. Bob Martins MTech. PhD.");
+        assertEquals("Martins, Bob MTech. PhD.",invertedName);
+    }
 }

@@ -2,34 +2,46 @@ package com.improve10x.fibonacci.nameinverter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class NameInverter {
     public String invertName(String name) {
-        if (name.equals("")){
+        if (name.equals("")) {
             return "";
-        } else if (!name.trim().contains(" ")) {
-           return name.trim();
-        }else {
-            ArrayList<String> names =  new ArrayList<> (Arrays.asList(name.trim().split("\\s+")));
-            removeHonorifics(names);
-            String postNominal = getPostNominal(names);
-            return names.get(1)+ ", " + names.get(0) + " " + postNominal.trim();
+        } else if (isSingleWord(name)) {
+            return name.trim();
+        } else {
+            return formulateMultiElementName(name);
         }
     }
 
-    private static String getPostNominal(ArrayList<String> names) {
+    private static boolean isSingleWord(String name) {
+        return !name.trim().contains(" ");
+    }
+
+    private String formulateMultiElementName(String name) {
+        ArrayList<String> names = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
+        removeHonorifics(names);
+        String postNominal = getPostNominal(names.subList(2, names.size()));
+        return names.get(1) + ", " + names.get(0) + " " + postNominal.trim();
+    }
+
+    private static String getPostNominal(List<String> postNominalsList) {
         String postNominal = "";
-        if (names.size() > 2){
-            for (int i = 2; i < names.size(); i++) {
-                postNominal += names.get(i) + " ";
-            }
+        for (int i = 0; i < postNominalsList.size(); i++) {
+            postNominal += postNominalsList.get(i) + " ";
         }
         return postNominal;
     }
 
-    private  void removeHonorifics(ArrayList<String> names) {
-        if (names.get(0).matches("Mrs.|Mr.|Miss.") && names.size() > 2){
-           names.remove(0);
+    private void removeHonorifics(ArrayList<String> names) {
+        if (hasHonorifics(names) && names.size() > 2) {
+            names.remove(0);
         }
     }
+
+    private static boolean hasHonorifics(ArrayList<String> names) {
+        return names.get(0).matches("Mrs.|Mr.|Miss.");
+    }
 }
+
