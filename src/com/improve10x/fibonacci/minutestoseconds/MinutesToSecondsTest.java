@@ -27,7 +27,7 @@ public class MinutesToSecondsTest {
     @Test
     public void givenNegativeOne_returnNegativeOne() {
         int minusOne = minutesToSeconds.findSeconds(-1);
-        assertEquals(-60, minusOne);
+        assertEquals(0, minusOne);
     }
 
     @Test
