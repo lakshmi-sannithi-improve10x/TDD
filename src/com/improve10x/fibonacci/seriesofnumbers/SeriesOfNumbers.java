@@ -10,9 +10,8 @@ public class SeriesOfNumbers {
         if (n<=0){
           return 0;
       }else {
-          System.out.print(n + "");
-          int result = n-1;
-          return result;
+          System.out.print(n + ""+ (n-1));
+          return n;
         }
 
     }
