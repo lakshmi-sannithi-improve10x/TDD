@@ -16,7 +16,7 @@ public class FizzBuzzTest {
     public void nothing(){
 
     }
-    
+
     @Test
     public void givenMinusOne_returnMinusOne(){
         String numberThree = fizzBuzz.findFizzBuzz(-1);
