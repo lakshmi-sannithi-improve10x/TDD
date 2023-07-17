@@ -16,17 +16,28 @@ public class AgeToDaysTest {
 
     }
 
+    @Test
+    public void givenMinusTen_returnMinusOne(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(-10);
+        assertEquals(-1,ageSixtyFive);
+    }
 
     @Test
-    public void given65Age_return23725Days(){
-        int ageSixtyFive = ageToDays.convertAgeToDays(65);
-       assertEquals(23725,ageSixtyFive);
+    public void givenMinusOne_returnMinusOne(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(-1);
+        assertEquals(-1,ageSixtyFive);
     }
 
     @Test
     public void givenZeroAge_returnZeroDays(){
         int ageZero = ageToDays.convertAgeToDays(0);
         assertEquals(0,ageZero);
+    }
+
+    @Test
+    public void given65Age_return23725Days(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(65);
+       assertEquals(23725,ageSixtyFive);
     }
 
     @Test
