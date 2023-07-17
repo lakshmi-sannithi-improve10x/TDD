@@ -33,4 +33,16 @@ public class AddTest {
         boolean threeAndSeventySeven = add.sumIsLessThan100(3,77);
         assertEquals(true,threeAndSeventySeven);
     }
+
+    @Test
+    public void given0_returnTue(){
+        boolean threeAndSeventySeven = add.sumIsLessThan100(0,0);
+        assertEquals(true,threeAndSeventySeven);
+    }
+
+    @Test
+    public void givenMinusOne_returnFalse(){
+        boolean threeAndSeventySeven = add.sumIsLessThan100(-1,-1);
+        assertEquals(true,threeAndSeventySeven);
+    }
 }
