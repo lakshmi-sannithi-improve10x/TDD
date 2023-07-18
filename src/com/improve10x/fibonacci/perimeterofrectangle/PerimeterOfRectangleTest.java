@@ -20,6 +20,17 @@ public class PerimeterOfRectangleTest {
     }
 
     @Test
+    public void givenMinusTenAndMinusTen_returnPerimeter() {
+        int number = perimeterOfRectangle.findPerimeterOfRectangle(-10, -10);
+        assertEquals(-1, number);
+    }
+
+    @Test
+    public void givenMinusOneAndMinusOne_returnPerimeter() {
+        int number = perimeterOfRectangle.findPerimeterOfRectangle(-1, -1);
+        assertEquals(-1, number);
+    }
+    @Test
     public void givenLengthAndWidth_returnPerimeter() {
         int number = perimeterOfRectangle.findPerimeterOfRectangle(0, 0);
         assertEquals(0, number);
