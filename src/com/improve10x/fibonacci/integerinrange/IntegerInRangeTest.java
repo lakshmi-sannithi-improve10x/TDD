@@ -31,6 +31,12 @@ public class IntegerInRangeTest {
     }
 
     @Test
+    public void givenAllMinusTens_returnTrue() {
+        boolean oneAndThreeAndNine = integerRange.findRange(-10, -10, -10);
+        assertEquals(false, oneAndThreeAndNine);
+    }
+
+    @Test
     public void givenOneAndThreeAndNine_returnTrue() {
         boolean oneAndThreeAndNine = integerRange.findRange(1, 3, 9);
         assertEquals(true, oneAndThreeAndNine);
