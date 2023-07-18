@@ -32,8 +32,8 @@ public class NameGreetingTest {
 
     @Test
     public void givenEmptyName_returnEmptyName() {
-        String name = nameGreeting.setNameGreeting("");
-        assertEquals("hello !", name);
+        String name = nameGreeting.setNameGreeting("world");
+        assertEquals("hello world!", name);
     }
 
     @Test
