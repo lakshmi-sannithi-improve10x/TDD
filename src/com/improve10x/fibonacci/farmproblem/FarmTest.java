@@ -20,7 +20,7 @@ public class FarmTest {
 
     @Test
     public void givenNoOfAnimalsLegsEmpty_returnsTotalAnimalsLegsEmpty() {
-        int animalLegs = theFarm.findAnimalLegs(0, 0, 0);
+        int animalLegs = theFarm.findAnimalLegs(-1, -1, -1);
         assertEquals(0, animalLegs);
     }
 
