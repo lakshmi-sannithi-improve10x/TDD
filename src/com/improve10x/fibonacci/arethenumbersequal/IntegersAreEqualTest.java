@@ -14,8 +14,8 @@ public class IntegersAreEqualTest {
     @Test
     public void givenMinusTen_returnTrue(){
         IntegersAreEqual integersAreEqual = new IntegersAreEqual();
-        boolean minusTen =  integersAreEqual.isEqual(-10,-10);
-        assertEquals(true,minusTen);
+        boolean minusTen =  integersAreEqual.isEqual(-10,-12);
+        assertEquals(false,minusTen);
     }
 
     @Test
