@@ -19,6 +19,18 @@ public class IntegerInRangeTest {
     }
 
     @Test
+    public void givenAllZeros_returnTrue() {
+        boolean oneAndThreeAndNine = integerRange.findRange(0, 0, 0);
+        assertEquals(false, oneAndThreeAndNine);
+    }
+
+    @Test
+    public void givenAllMinusOne_returnTrue() {
+        boolean oneAndThreeAndNine = integerRange.findRange(-1, -1, -1);
+        assertEquals(false, oneAndThreeAndNine);
+    }
+
+    @Test
     public void givenOneAndThreeAndNine_returnTrue() {
         boolean oneAndThreeAndNine = integerRange.findRange(1, 3, 9);
         assertEquals(true, oneAndThreeAndNine);

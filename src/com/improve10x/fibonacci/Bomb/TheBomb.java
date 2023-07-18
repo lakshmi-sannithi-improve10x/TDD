@@ -5,7 +5,11 @@ public class TheBomb {
         String result = "";
         String textInLowerCase;
         textInLowerCase = name.toLowerCase();
-        if (textInLowerCase.contains("bomb")) {
+        if (textInLowerCase.contains("null")){
+            result = "null";
+        } else if (textInLowerCase.contains("")) {
+           result = "empty";
+        } else if (textInLowerCase.contains("bomb")) {
             result = "DUCK!";
         } else {
             result = "Relax, there's no bomb.";

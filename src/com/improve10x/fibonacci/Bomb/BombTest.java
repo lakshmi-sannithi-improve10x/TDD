@@ -19,6 +19,20 @@ public class BombTest {
     }
 
     //bomb("There is a bomb.") ➞ "DUCK!"
+
+    @Test
+    public void givenNull_returnDUCK() {
+        String text = theBomb.CheckWord("null ");
+        assertEquals("null", text);
+    }
+
+    @Test
+    public void givenEmptyString_returnDUCK() {
+        String text = theBomb.CheckWord("");
+        assertEquals("empty", text);
+    }
+
+
     @Test
     public void givenThereIsABomb_returnDUCK() {
         String text = theBomb.CheckWord("there is bomb ");
