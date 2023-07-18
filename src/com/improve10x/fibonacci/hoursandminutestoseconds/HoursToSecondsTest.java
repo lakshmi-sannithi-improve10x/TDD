@@ -19,6 +19,18 @@ public class HoursToSecondsTest {
     }
 
     @Test
+    public void givenMinusTenHoursAndMinusOneMinute_returnNegativeOne() {
+        int twoHoursAndThreeMinutes = hoursToSeconds.findSeconds(-10, -1);
+        assertEquals(-1, twoHoursAndThreeMinutes);
+    }
+
+    @Test
+    public void givenMinusOneHourAndMinusOneMinute_return7380Seconds() {
+        int twoHoursAndThreeMinutes = hoursToSeconds.findSeconds(-1, -1);
+        assertEquals(-1, twoHoursAndThreeMinutes);
+    }
+
+    @Test
     public void givenTwoHoursAndThreeMinutes_return7380Seconds() {
         int twoHoursAndThreeMinutes = hoursToSeconds.findSeconds(2, 3);
         assertEquals(7380, twoHoursAndThreeMinutes);
