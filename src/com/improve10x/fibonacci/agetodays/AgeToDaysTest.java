@@ -45,4 +45,23 @@ public class AgeToDaysTest {
         int ageSixtyFive = ageToDays.convertAgeToDays(20);
         assertEquals(7300,ageSixtyFive);
     }
+
+    @Test
+    public void giveAgeOne_return365Days(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(1);
+        assertEquals(365,ageSixtyFive);
+    }
+
+
+    @Test
+    public void giveAge2_return730Days(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(2);
+        assertEquals(730,ageSixtyFive);
+    }
+
+    @Test
+    public void giveAge6_return2190Days(){
+        int ageSixtyFive = ageToDays.convertAgeToDays(6);
+        assertEquals(2190,ageSixtyFive);
+    }
 }
