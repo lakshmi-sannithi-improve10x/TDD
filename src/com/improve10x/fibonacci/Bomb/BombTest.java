@@ -22,14 +22,14 @@ public class BombTest {
 
     @Test
     public void givenNull_returnDUCK() {
-        String text = theBomb.CheckWord("null ");
-        assertEquals("null", text);
+        String text = theBomb.CheckWord("null");
+        assertEquals(null, text);
     }
 
     @Test
     public void givenEmptyString_returnDUCK() {
         String text = theBomb.CheckWord("");
-        assertEquals("empty", text);
+        assertEquals("", text);
     }
 
 

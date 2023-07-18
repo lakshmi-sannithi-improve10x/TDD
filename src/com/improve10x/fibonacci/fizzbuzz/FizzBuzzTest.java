@@ -18,9 +18,15 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void givenMinusOne_returnMinusOne(){
+    public void givenMinusOne_returnEmptyString(){
         String numberThree = fizzBuzz.findFizzBuzz(-1);
-        assertEquals("-1",numberThree);
+        assertEquals("",numberThree);
+    }
+
+    @Test
+    public void givenZero_returnEmptyString(){
+        String numberThree = fizzBuzz.findFizzBuzz(0);
+        assertEquals("",numberThree);
     }
     @Test
     public void givenNumberIsMultipleOf3_returnFizz(){
