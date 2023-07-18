@@ -27,7 +27,7 @@ public class NameGreetingTest {
     @Test
     public void givenEmptyName_returnEmpty() {
         String name = nameGreeting.setNameGreeting("");
-        assertEquals("empty", name);
+        assertEquals("", name);
     }
 
     @Test
@@ -50,8 +50,8 @@ public class NameGreetingTest {
 
     @Test
     public void givenNameHi_returnHelloHi() {
-        String name = nameGreeting.setNameGreeting("hi");
-        assertEquals("hello hi!", name);
+        String name = nameGreeting.setNameGreeting("hi hello there is bomb don't go  ");
+        assertEquals("hello hi hello there is bomb don't go  !", name);
     }
 
     @Test
@@ -68,8 +68,8 @@ public class NameGreetingTest {
 
     @Test
     public void givenNameEd_returnHelloEdExclamationMark() {
-        String name = nameGreeting.setNameGreeting("Ed");
-        assertEquals("hello Ed!", name);
+        String name = nameGreeting.setNameGreeting("  Good morning to all");
+        assertEquals("hello   Good morning to all!", name);
     }
 }
 

@@ -6,7 +6,7 @@ public class Greeting {
         if (name == "null") {
             return null;
         } else if (name == "") {
-            return "empty";
+            return "";
         } else {
             nameGreeting = "hello" + " " + name + "!";
             return nameGreeting;
