@@ -19,6 +19,24 @@ public class TwoMakesTenTest {
     }
 
     @Test
+    public void giveZero_returnFalse() {
+        boolean nineAndTen = twoMakesTen.makesTen(0, 0);
+        assertEquals(false, nineAndTen);
+    }
+
+    @Test
+    public void giveNegativeOne_returnFalse() {
+        boolean nineAndTen = twoMakesTen.makesTen(-1, -1);
+        assertEquals(false, nineAndTen);
+    }
+
+    @Test
+    public void giveNegativeTen_returnFalse() {
+        boolean nineAndTen = twoMakesTen.makesTen(-10, -10);
+        assertEquals(false, nineAndTen);
+    }
+
+    @Test
     public void giveNineAndTen_returnTrue() {
         boolean nineAndTen = twoMakesTen.makesTen(9, 10);
         assertEquals(true, nineAndTen);
