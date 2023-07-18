@@ -19,6 +19,18 @@ public class NameGreetingTest {
     }
 
     @Test
+    public void givenNull_returnEmptyName() {
+        String name = nameGreeting.setNameGreeting("null");
+        assertEquals(null, name);
+    }
+
+    @Test
+    public void givenEmptyName_returnEmpty() {
+        String name = nameGreeting.setNameGreeting("");
+        assertEquals("empty", name);
+    }
+
+    @Test
     public void givenEmptyName_returnEmptyName() {
         String name = nameGreeting.setNameGreeting("");
         assertEquals("hello !", name);
