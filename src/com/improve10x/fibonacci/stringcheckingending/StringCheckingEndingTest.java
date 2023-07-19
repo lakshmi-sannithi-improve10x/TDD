@@ -17,6 +17,16 @@ public class StringCheckingEndingTest {
     }
 
     @Test
+    public  void givenNull_returnFalse(){
+        boolean text = stringCheckingEnding.findSuffix("null","null");
+        assertEquals(true,text);
+    }
+    @Test
+    public  void givenEmptyString_returnTrue(){
+        boolean text = stringCheckingEnding.findSuffix("","");
+        assertEquals(true,text);
+    }
+    @Test
     public  void givenAbc_returnTrue(){
         boolean text = stringCheckingEnding.findSuffix("abc","bc");
         assertEquals(true,text);
@@ -47,6 +57,4 @@ public class StringCheckingEndingTest {
         boolean text = stringCheckingEnding.findSuffix("Convention","tio");
         assertEquals(false,text);
     }
-
-
 }
