@@ -5,6 +5,8 @@ public class NthEvenNumber {
         int evenNumber = 0;
         if (n < 0) {
             return -1;
+        } else if (n ==0) {
+            return 0;
         } else {
             evenNumber = 2 * n - 2;
             return evenNumber;

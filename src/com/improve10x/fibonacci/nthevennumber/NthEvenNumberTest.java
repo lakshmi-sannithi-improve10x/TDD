@@ -19,6 +19,11 @@ public class NthEvenNumberTest {
     }
 
     @Test
+    public void givenZero_returnZero() {
+        int evenNumber = nthEvenNumber.findEvenNumber(0);
+        assertEquals(0, evenNumber);
+    }
+    @Test
     public void givenNegativeOne_returnNegativeOne() {
         int evenNumber = nthEvenNumber.findEvenNumber(-1);
         assertEquals(-1, evenNumber);
