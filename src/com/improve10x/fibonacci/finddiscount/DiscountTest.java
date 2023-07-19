@@ -25,6 +25,11 @@ public class DiscountTest {
     }
 
     @Test
+    public void givenMinusOne_returnMinusOne() {
+        int totalDiscount = discount.findDiscount(-10, -9);
+        assertEquals(-1, totalDiscount);
+    }
+    @Test
     public void givenPriceAndDiscount_returnTotalDiscount() {
         int totalDiscount = discount.findDiscount(1500, 50);
         assertEquals(750, totalDiscount);
@@ -47,5 +52,4 @@ public class DiscountTest {
         int totalDiscount = discount.findDiscount(1000, 75);
         assertEquals(250, totalDiscount);
     }
-
 }
