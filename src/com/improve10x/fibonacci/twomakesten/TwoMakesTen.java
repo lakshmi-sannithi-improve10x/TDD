@@ -3,9 +3,7 @@ package com.improve10x.fibonacci.twomakesten;
 public class TwoMakesTen {
     public boolean makesTen(int a, int b) {
         boolean result = false;
-        int num1 = a;
-        int num2 = b;
-        if (num1 == 10 || num2 == 10 || num1 + num2 == 10) {
+        if (a == 10 || b == 10 || a + b == 10) {
             result = true;
         }
         return result;
