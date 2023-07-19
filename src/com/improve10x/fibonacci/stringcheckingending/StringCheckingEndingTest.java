@@ -18,8 +18,8 @@ public class StringCheckingEndingTest {
 
     @Test
     public  void givenNull_returnFalse(){
-        boolean text = stringCheckingEnding.findSuffix("null","null");
-        assertEquals(true,text);
+        boolean text = stringCheckingEnding.findSuffix("null","nu");
+        assertEquals(false,text);
     }
     @Test
     public  void givenEmptyString_returnTrue(){
