@@ -17,6 +17,29 @@ public class StringIsPalindromeTest {
     }
 
     @Test
+    public void givenNull_returnFalse() {
+        boolean text = stringIsPalindrome.findPalindrome("null");
+        assertEquals(false, text);
+    }
+
+    @Test
+    public void givenEmptyString_returnTrue() {
+        boolean text = stringIsPalindrome.findPalindrome("");
+        assertEquals(true, text);
+    }
+
+    @Test
+    public void givenA_returnTrue() {
+        boolean text = stringIsPalindrome.findPalindrome("a");
+        assertEquals(true, text);
+    }
+
+    @Test
+    public void givenAb_returnFalse() {
+        boolean text = stringIsPalindrome.findPalindrome("ab");
+        assertEquals(false, text);
+    }
+    @Test
     public void givenNeuquen_returnTrue() {
         boolean text = stringIsPalindrome.findPalindrome("neuquen");
         assertEquals(true, text);

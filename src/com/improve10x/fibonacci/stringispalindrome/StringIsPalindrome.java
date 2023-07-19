@@ -8,10 +8,13 @@ public class StringIsPalindrome {
         for (int i = trimWord.length() - 1; i >= 0; i--) {
             reverse += trimWord.charAt(i);
         }
-        if (trimWord.equals(reverse)) {
-            return true;
-        } else {
+        if (trimWord == null){
             return false;
+        } else if (trimWord == "") {
+            return true;
+        }else if (trimWord.equals(reverse)) {
+            return true;
         }
+        return false;
     }
 }
