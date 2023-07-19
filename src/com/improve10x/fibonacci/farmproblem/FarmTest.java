@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FarmTest {
-
     private TheFarm theFarm;
 
     @BeforeEach
@@ -19,8 +18,19 @@ public class FarmTest {
     }
 
     @Test
-    public void givenNoOfAnimalsLegsEmpty_returnsTotalAnimalsLegsEmpty() {
+    public void givenNegativeOne_returnsNegativeOne() {
         int animalLegs = theFarm.findAnimalLegs(-1, -1, -1);
+        assertEquals(-1, animalLegs);
+    }
+
+    @Test
+    public void givenNegativeTen_returnsNegativeOne() {
+        int animalLegs = theFarm.findAnimalLegs(-10, -10, -10);
+        assertEquals(-1, animalLegs);
+    }
+    @Test
+    public void givenNoOfAnimalsLegsEmpty_returnsTotalAnimalsLegsEmpty() {
+        int animalLegs = theFarm.findAnimalLegs(0, 0, 0);
         assertEquals(0, animalLegs);
     }
 
@@ -35,7 +45,6 @@ public class FarmTest {
         int animalLegs = theFarm.findAnimalLegs(2, 3, 5);
         assertEquals(36, animalLegs);
     }
-
 
     @Test
     public void givenTwoANdThreeAndFiveAnimals_returnsTotalAnimalLegsTwentyTwo() {
@@ -54,5 +63,4 @@ public class FarmTest {
         int animalLegs = theFarm.findAnimalLegs(10, 10, 10);
         assertEquals(100, animalLegs);
     }
-
 }

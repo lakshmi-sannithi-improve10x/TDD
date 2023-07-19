@@ -3,7 +3,7 @@ package com.improve10x.fibonacci.farmproblem;
 public class TheFarm {
     public int findAnimalLegs(int chickenLegs, int cowLegs, int pigLegs) {
         int AnimalLegs = chickenLegs + cowLegs + pigLegs;
-        if (AnimalLegs == -1){
+        if (AnimalLegs <0){
             return -1;
         }else if (AnimalLegs >=0){
             int noOfChickenLegs = chickenLegs * 2;
