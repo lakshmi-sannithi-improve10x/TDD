@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UpvotesVsDownvotesTest {
-    private UpvotesVsDownvotes upvotesVsDownvotes;
+public class UpVotesVsDownVotesTest {
+    private UpVotesVsDownVotes upvotesVsDownvotes;
     @BeforeEach
     public void setup(){
-         upvotesVsDownvotes = new UpvotesVsDownvotes();
+         upvotesVsDownvotes = new UpVotesVsDownVotes();
     }
     @Test
     public void nothing(){
@@ -42,7 +42,7 @@ public class UpvotesVsDownvotesTest {
 
     @Test
     public void  given132_returnZero(){
-        UpvotesVsDownvotes upvotesVsDownvotes = new UpvotesVsDownvotes();
+        UpVotesVsDownVotes upvotesVsDownvotes = new UpVotesVsDownVotes();
         int value = upvotesVsDownvotes.findVotes(132,132);
         assertEquals(0,value);
     }
