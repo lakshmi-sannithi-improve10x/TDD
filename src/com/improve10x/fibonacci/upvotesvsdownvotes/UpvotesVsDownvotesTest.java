@@ -25,7 +25,7 @@ public class UpvotesVsDownvotesTest {
     @Test
     public void  givenNegativeNumber_returnNegativeOne(){
         int minusOne = upvotesVsDownvotes.findVotes(-1,-1);
-        assertEquals(0,minusOne);
+        assertEquals(-1,minusOne);
     }
 
     @Test

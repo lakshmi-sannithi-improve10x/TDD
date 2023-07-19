@@ -2,9 +2,11 @@ package com.improve10x.fibonacci.upvotesvsdownvotes;
 
 public class UpvotesVsDownvotes {
     public int findVotes(int u, int d) {
-        int votes = 0;
-        votes = u - d;
-        return votes;
+        if (u<0 && d<0){
+            return -1;
+        }else {
+            return u - d;
+        }
     }
 }
 
