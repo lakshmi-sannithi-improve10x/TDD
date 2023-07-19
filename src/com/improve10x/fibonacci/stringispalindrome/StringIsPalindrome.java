@@ -2,7 +2,7 @@ package com.improve10x.fibonacci.stringispalindrome;
 
 public class StringIsPalindrome {
 
-    public static boolean findPalindrome(String word) {
+    public  boolean findPalindrome(String word) {
         String reverse = "";
         String trimWord = word.trim();
         for (int i = trimWord.length() - 1; i >= 0; i--) {
