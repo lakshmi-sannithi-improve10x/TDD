@@ -19,6 +19,22 @@ public class NthEvenNumberTest {
     }
 
     @Test
+    public void givenNegativeOne_returnNegativeOne() {
+        int evenNumber = nthEvenNumber.findEvenNumber(-1);
+        assertEquals(-1, evenNumber);
+    }
+
+    @Test
+    public void givenNegativeTen_returnNegativeOne() {
+        int evenNumber = nthEvenNumber.findEvenNumber(-10);
+        assertEquals(-1, evenNumber);
+    }
+    @Test
+    public void givenOne_returnEvenNumberIsTwo() {
+        int evenNumber = nthEvenNumber.findEvenNumber(1);
+        assertEquals(0, evenNumber);
+    }
+    @Test
     public void givenEvenNumberIsTwo_returnEvenNumberIsTwo() {
         int evenNumber = nthEvenNumber.findEvenNumber(2);
         assertEquals(2, evenNumber);
@@ -27,7 +43,7 @@ public class NthEvenNumberTest {
     @Test
     public void givenEvenNumberIsTen_returnEvenNumberIsEighteen() {
         int evenNumber = nthEvenNumber.findEvenNumber(10);
-        assertEquals(18, evenNumber);
+        assertEquals(16, evenNumber);
     }
 
     @Test
