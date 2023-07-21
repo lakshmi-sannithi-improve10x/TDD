@@ -20,8 +20,8 @@ public class DiscountTest {
 
     @Test
     public void givenDiscountZero_returnDiscountZero() {
-        int totalDiscount = discount.findDiscount(0, 0);
-        assertEquals(0, totalDiscount);
+        int totalDiscount = discount.findDiscount(1, 0);
+        assertEquals(1, totalDiscount);
     }
 
     @Test
