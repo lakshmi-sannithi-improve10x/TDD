@@ -1,9 +1,10 @@
 package com.improve10x.fibonacci.templerungame;
 
 
-public class SpikePit {
+public class SpikePit extends Obstacle {
     private  int width;
-    public SpikePit(int width) {
+    public SpikePit(int width) throws InvalidObstacleDamageException {
+        super("SpikePit",10);
         if (width<0 || width>20){
             throw new InvalidSpikePitWidthException();
         }

@@ -1,8 +1,9 @@
 package com.improve10x.fibonacci.templerungame;
 
-public class FireBall {
+public class FireBall extends Obstacle{
     private int speed;
-    public FireBall(int speed) {
+    public FireBall(int speed) throws InvalidObstacleDamageException {
+        super("Fireball",30);
         if (speed < 0 || speed > 100){
             throw new InvalidFireBallSpeedException();
         }

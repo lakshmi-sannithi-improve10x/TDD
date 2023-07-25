@@ -38,14 +38,14 @@ public class SpikePitTest {
     }
 
     @Test
-    public  void  given10_whenTrapMethodCalled_displayTrapMessage(){
+    public  void  given10_whenTrapMethodCalled_displayTrapMessage() throws Obstacle.InvalidObstacleDamageException {
        SpikePit spikePit = new SpikePit(10);
        spikePit.trap();
        assertEquals("SpikePit is Trapped with" + 10 + "meters width!",outputStream.toString().trim());
     }
 
     @Test
-    public  void  given20_whenTrapMethodCalled_displayTrapMessage(){
+    public  void  given20_whenTrapMethodCalled_displayTrapMessage() throws Obstacle.InvalidObstacleDamageException {
         SpikePit spikePit = new SpikePit(20);
         spikePit.trap();
         assertEquals("SpikePit is Trapped with" + 20 + "meters width!",outputStream.toString().trim());
