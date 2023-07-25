@@ -6,7 +6,7 @@ public class FireBall {
         if (speed < 0 || speed > 100){
             throw new InvalidFireBallSpeedException();
         }
-            this.speed = speed;
+        this.speed = speed;
     }
 
     public void roll() {
