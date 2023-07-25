@@ -6,9 +6,8 @@ public class SpikePit {
     public SpikePit(int width) {
         if (width<0 || width>20){
             throw new InvalidSpikePitWidthException();
-        }else {
-            this.width = width;
         }
+            this.width = width;
     }
 
     public void trap() {
