@@ -1,6 +1,6 @@
 package com.improve10x.fibonacci.templerungame;
 
-public class Player {
+public class Player extends Character{
     private String name;
     private int health;
     private int score;
@@ -11,6 +11,7 @@ public class Player {
     }
 
     public Player(String name, int health) {
+        super(name,health);
         this.name = (name == null) ? "" : name.trim();
         if (health < 0 || health > 100) {
             throw new InvalidHealthException();
