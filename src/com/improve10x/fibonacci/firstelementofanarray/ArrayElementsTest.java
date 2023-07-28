@@ -25,7 +25,7 @@ public class ArrayElementsTest {
     }
 
     @Test
-    public void givenEmptyArray_returnMinusOne() {
+    public void givenEmptyArray_returnZero() {
         int zero = arrayElements.findArrayElement(new int[]{});
         assertEquals(0, zero);
     }
@@ -61,7 +61,7 @@ public class ArrayElementsTest {
     }
 
     @Test
-    public void givenNegativeValuesArray_returnNegativeOne() {
+    public void givenNegativeValuesArray_returnNegativeFiveHundred() {
         int zero = arrayElements.findArrayElement(new int[]{-500, 0, 50});
         assertEquals(-500, zero);
     }
