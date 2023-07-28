@@ -1,10 +1,17 @@
 package com.improve10x.fibonacci.maximumedgeofatriangle;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TriangleTest {
+    private Triangle triangle;
+
+    @BeforeEach
+    public void setup() {
+        triangle = new Triangle();
+    }
 
     @Test
     public void nothing() {
@@ -13,7 +20,7 @@ public class TriangleTest {
 
     @Test
     public void givenZero_returnZero() {
-        Triangle triangle = new Triangle();
+
         int zero = triangle.findEdgeOfATriangle(0, 0);
         assertEquals(0, zero);
     }
